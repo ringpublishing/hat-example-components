@@ -1,0 +1,42 @@
+{
+	"name": "hat-example-components",
+	"version": "0.0.15",
+	"description": "Head App Template - example components",
+	"license": "MIT",
+	"repository": {},
+	"main": "dist/index.js",
+	"module": "dist/index.js",
+	"source": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"engines": {
+		"node": "^16"
+	},
+	"private": false,
+	"dependencies": {
+		"@ras-tech/ocdn": "3.3.0",
+		"@ringieraxelspringer/tsconfig": "^4.0.0",
+		"@ringpublishing/graphql-api-client": "^2.0.0",
+		"@types/node": "*",
+		"@types/react": "^18.0.28",
+		"hat-ring-components": "https://github.com/ringpublishing/hat-components.git#v1.0.0",
+		"lodash": "^4.17.21",
+		"next": "13.2.4",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"sass": "^1.57.1"
+	},
+	"devDependencies": {
+		"cypress": "^12.3.0",
+		"start-server-and-test": "^1.14.0",
+		"typescript": "~4.7.4"
+	},
+	"scripts": {
+		"build": "rmdir /s /q dist && mkdir dist && tsc --jsx react-jsx",
+		"dev": "tsc -w --jsx react-jsx -p .",
+		"server": "next e2e -p 3001",
+		"cypress": "cypress open",
+		"cypress:headless": "cypress run",
+		"e2e": "start-server-and-test server http://localhost:3001 cypress",
+		"e2e:headless": "start-server-and-test server http://localhost:3001 cypress:headless"
+	}
+}
