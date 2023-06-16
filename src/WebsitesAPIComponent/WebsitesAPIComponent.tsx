@@ -6,8 +6,6 @@ import Link from "next/link";
 import {ComponentParams} from "hat-ring-components/dist/types/types";
 import styles from "../../css/WebsitesAPIComponent/WebsitesAPIComponent.module.scss";
 
-const {OcdnUrl} = require('@ras-tech/ocdn');
-
 export interface WebsitesAPIComponentParams extends ComponentParams {
     config: {
         limit: number,
@@ -61,18 +59,8 @@ export async function WebsitesAPIComponent(params: WebsitesAPIComponentParams) {
     return <ul className={'WebsitesAPIComponent ' + styles.list}>
         {stories.map(edge => {
             const node = edge.node;
-            const ocdnBucketName = process.env.NEXT_PUBLIC_OCDN_BUCKET_NAME!;
-            const ocdnTransformKey = process.env.NEXT_PUBLIC_OCDN_TRANSFORM_KEY!;
             let imageUrl = node.image?.url;
 
-            if (ocdnBucketName && ocdnTransformKey && imageUrl) {
-                const cropImage = new OcdnUrl();
-                cropImage.init(imageUrl);
-                cropImage.setKey(ocdnTransformKey);
-                cropImage.setBucket(ocdnBucketName);
-                cropImage.resizeCropAuto(200, 120);
-                imageUrl = cropImage.getUrl();
-            }
             // @ts-ignore
             if (params.context.customData.ListItemsIds.includes(node.id)) {
                 return null;
