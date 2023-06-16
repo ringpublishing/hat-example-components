@@ -3,7 +3,7 @@ import * as _ from 'lodash';
 import { WebsitesApiClientBuilder } from '@ringpublishing/graphql-api-client';
 import {gql} from 'graphql-tag';
 import Link from "next/link";
-import {ComponentParams} from "hat-ring-components/dist/types/types";
+import {ComponentParams} from "hat-ring-components/src/types/types";
 import styles from "../../css/WebsitesAPIComponent/WebsitesAPIComponent.module.scss";
 
 export interface WebsitesAPIComponentParams extends ComponentParams {
