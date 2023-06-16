@@ -17,7 +17,7 @@
 		"@ringpublishing/graphql-api-client": "^2.0.0",
 		"@types/node": "*",
 		"@types/react": "^18.0.28",
-		"hat-ring-components": "https://github.com/ringpublishing/hat-components.git#v1.0.0",
+		"hat-ring-components": "https://github.com/ringpublishing/hat-components.git#1.0.0",
 		"lodash": "^4.17.21",
 		"next": "13.2.4",
 		"react": "18.2.0",
