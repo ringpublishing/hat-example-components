@@ -1,13 +1,13 @@
 {
 	"name": "hat-example-components",
-	"version": "0.0.15",
+	"version": "1.0.4",
 	"description": "Head App Template - example components",
 	"license": "MIT",
 	"repository": {},
-	"main": "dist/index.js",
-	"module": "dist/index.js",
-	"source": "dist/index.js",
-	"types": "dist/index.d.ts",
+	"main": "src/index.js",
+	"module": "src/index.js",
+	"source": "src/index.js",
+	"types": "src/index.d.ts",
 	"engines": {
 		"node": "^16"
 	},
